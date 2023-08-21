@@ -1,0 +1,50 @@
+﻿<Window x:Class="Jacobs.DD.Windows.SecondaryWindows.SecondaryWinNewLayerName"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jacobs.DD.Windows.SecondaryWindows"
+        mc:Ignorable="d"
+        Title="Create new layer" 
+        Height="125" 
+        Width="400" 
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>    <!--Row 0-->
+            <RowDefinition Height="*"/>  <!--Row 1-->
+            <RowDefinition Height="32"/>    <!--Row 2-->
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Stretch"
+                    Grid.Row="1"
+                    Margin="4">
+            <Label Name="labelNewLayerName"
+                   Content="New Layer Name: "
+                   VerticalAlignment="Center"/>
+            <TextBox x:Name="textBoxNewLayerName"
+                     Width="260"
+                     Height="36"
+                     VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Grid.Row="2">
+            <Button x:Name="btnOk"
+                    Content="OK"
+                    IsDefault="True"
+                    Click="btnOk_Click"
+                    Width="76"
+                    Margin="4"/>
+            <Button x:Name="btnCancel"
+                    Content="Cancel"
+                    IsCancel="True"
+                    Click="btnCancel_Click"
+                    Width="76"
+                    Margin="4"/>
+
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>
